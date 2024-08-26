@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn-Based Chess-like Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Turn-Based Chess-like Game</h1>
+
+    <div id="game-container">
+        <div id="game-board"></div>
+        <div id="controls">
+            <input type="text" id="move-input" placeholder="Enter move (e.g., P1:L)">
+            <button id="submit-move">Submit Move</button>
+        </div>
+        <div id="status">
+            <p id="status-message">Waiting for the game to start...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
